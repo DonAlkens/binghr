@@ -2,7 +2,6 @@
 
 namespace App\Http\Resources;
 
-use App\Models\RolePermissions;
 use App\Models\RoleType;
 use App\Models\UserPermissions;
 use Illuminate\Http\Resources\Json\JsonResource;
@@ -21,6 +20,7 @@ class UserResource extends JsonResource
         $data["role_type"] = RoleType::find($this->role_type_id);
         $data["permissions"] = UserPermissions::where('user_id', $this->id)->get();
         $data["access_level"] = $data["role_type"]->permission;
+        $data['created_at'] = date('d M, Y', strtotime($this->created_at));
         return $data;
     }
 }

@@ -276,7 +276,7 @@ class UserController extends Controller
                     $response = [
                         "status" => 200,
                         "success" => true,
-                        "message" => "User has been created successfully!",
+                        "message" => "User details has been updated successfully!",
                         "user" => UserResource::make($user)
                     ];
                 } else {

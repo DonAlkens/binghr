@@ -206,7 +206,7 @@
         function details(user) {
             return `<div class="d-flex">
             <div class="bhr__user-image">
-                <img src="/assets/images/avatar-1.jpg" alt="">
+                <img src="/assets/images/avatar-${user.id}.jpg" alt="">
             </div>
             <div class="bhr__user-details">
                 <strong>${user.firstname + ' ' + user.lastname}</strong>
@@ -222,7 +222,7 @@
             <td><p class="mt-2 mb-0">${user.role_type.name}</p></td>
             <td>
                 <div class="bhr__actions mt-2">
-                    <a href="/api/user/${user.id}" class="edit-user me-2"> <i data-feather="edit" class="fa fa-pencil-alt icon-sm"></i> </a>
+                    <a href="/api/user/${user.id}" class="edit-user me-2"> <i data-feather="edit" class="fa fa-edit icon-sm"></i> </a>
                     <a href="/api/user/delete/${user.id}" row-id="#RowID${user.id}" class="delete-user"> <i data-feather="trash" class="fa fa-trash-alt icon-sm"></i> </a>
                 </div>
             </td>

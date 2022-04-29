@@ -41,7 +41,7 @@
                                 <td>
                                     <div class="d-flex">
                                         <div class="bhr__user-image">
-                                            <img src="{{ asset('/assets/images/avatar-1.jpg') }}" alt="">
+                                            <img src="/assets/images/avatar-{{$user->id}}.jpg" alt="">
                                         </div>
                                         <div class="bhr__user-details">
                                             <strong>{{ $user->firstname .' '. $user->lastname }}</strong>
@@ -72,7 +72,7 @@
                                 </td>
                                 <td>
                                     <p class="mt-2 mb-0">
-                                    {{ $user->created_at }}
+                                    {{ date('d M, Y', strtotime($user->created_at)); }}
                                     <p>
                                 </td>
                                 <td>
